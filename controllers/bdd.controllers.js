@@ -1,7 +1,6 @@
 const mysqldump=require('mysqldump');
 const moment = require('moment');
 const fs=require('fs');
-
 const sequelize = require("../db");
 
 const DB_HOST=process.env.DB_HOST || "localhost";
@@ -19,6 +18,7 @@ async function backup(req, res){
         user: DB_USER,
         password: DB_PASSWORD,
         database: DB_DATABASE,
+        connectTimeout: 30000
         },
     });
 

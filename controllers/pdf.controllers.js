@@ -64,11 +64,11 @@ async function PDFestudiante(callback, endcallback){
     const table ={
         title: "Lista de estudiantes",
         headers: [
-            {label:'cedula',width:100},
-            {label:'nombre',width:100},
-            {label:'apellido',width:100},
-            {label:'correo',width:150},
-            {label:'estado',width:70}],
+            {label:'Cédula',width:100},
+            {label:'Nombre',width:100},
+            {label:'Apellido',width:100},
+            {label:'Correo',width:150},
+            {label:'Estado',width:70}],
         rows: rowEstudiantes,
         font:"Courier",
         fontSize:16
@@ -144,11 +144,11 @@ async function PDFprofesor(callback, endcallback){
     const table ={
         title: "Lista de profesores",
         headers: [
-            {label:'cedula',width:100},
-            {label:'nombre',width:100},
-            {label:'apellido',width:100},
-            {label:'correo',width:150},
-            {label:'estado',width:70}],
+            {label:'Cédula',width:100},
+            {label:'Nombre',width:100},
+            {label:'Apellido',width:100},
+            {label:'Correo',width:150},
+            {label:'Estado',width:70}],
         rows: rowProfesores,
         font:"Courier",
         fontSize:16
@@ -231,10 +231,10 @@ async function PDFnota(callback, endcallback, id){
     const table ={
         title: "Lista de estudiantes con notas",
         headers: [
-            {label:'cedula',width:120},
-            {label:'nombre',width:150},
-            {label:'apellido',width:150},
-            {label:'nota',width:100}],
+            {label:'Cédula',width:120},
+            {label:'Nombre',width:150},
+            {label:'Apellido',width:150},
+            {label:'Nota',width:100}],
         rows: rowNotas,
         font:"Courier",
         fontSize:16

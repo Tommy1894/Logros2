@@ -1,35 +1,98 @@
 const mysqldump=require('mysqldump');
 const moment = require('moment');
 const fs=require('fs');
-const sequelize = require("../db");
 
-const DB_HOST=process.env.DB_HOST || "localhost";
-const DB_USER=process.env.DB_USER || "root";
-const DB_PASSWORD=process.env.DB_PASSWORD|| "";
-const DB_DATABASE=process.env.DB_DATABASE || "mydb";
+const sequelize = require("../db");
 
 async function backup(req, res){    
 
-    const name=`BackUp (${moment().format('DD_MM_YYYY')}).sql`;
+    try{
+        const name=`BackUp (${moment().format('DD_MM_YYYY')}).sql`;
 
-    const result=await mysqldump({
-        connection: {
-        host: DB_HOST,
-        user: DB_USER,
-        password: DB_PASSWORD,
-        database: DB_DATABASE,
-        connectTimeout: 50000
-        },
-    });
 
-    const data= result.dump.data;
+        const datoUsu=await sequelize.query("Select * from 1usuarios" );
     
-    const Stream=res.writeHead(200, {
-        'Content-Type':'application/sql',
-        'Content-Disposition': `attachment;filename=${name}`
-    })
+        var arrUsu=datoUsu[0];
+        var result="";
 
-    Stream.end(data)
+        const usuario='INSERT INTO `1usuarios` (`cedula`,`nombre`, `apellido`, `direccion`, `telefono`, `sexo`, `fecha_nac`, `correo`, `contrasena`, `perfil`, `estado`, `intentos` ) VALUES ';
+
+        for(let i=0; i<arrUsu.length;i++){
+
+            result+=usuario+`('${arrUsu[i].cedula}', '${arrUsu[i].nombre}','${arrUsu[i].apellido}','${arrUsu[i].direccion}','${arrUsu[i].telefono}','${arrUsu[i].sexo}','${arrUsu[i].fecha_nac}','${arrUsu[i].correo}','${arrUsu[i].contrasena}','${arrUsu[i].perfil}','${arrUsu[i].estado}',${arrUsu[i].intentos});\n`
+
+        }
+        result+="\n\n";
+
+
+
+        const datoCur=await sequelize.query("Select * from 2cursos" );
+    
+        var arrCur=datoCur[0];
+
+        const curso='INSERT INTO `2cursos` (`id`, `nombre`, `costo`, `descripcion`, `estado`) VALUES';
+
+        for(let i=0; i<arrCur.length;i++){
+
+            result+=curso+`(${arrCur[i].id},'${arrCur[i].nombre}',${arrCur[i].costo},'${arrCur[i].descripcion}','${arrCur[i].estado}');\n`;
+
+        }
+        result+="\n\n";
+
+
+        const datoNot=await sequelize.query("Select * from 3notificacions" );
+    
+        var arrNot=datoNot[0];
+
+        const notificacion='INSERT INTO `3notificacions` (`numReferencia`,`nom_banco`,`ced_titular`,`seccion_id`,`monto`,`estado`,`fecha_pago`,`fecha_procesada`,`est_cedula`) VALUES ';
+
+        for(let i=0; i<arrNot.length;i++){
+
+            result+=notificacion+`('${arrNot[i].numReferencia}','${arrNot[i].nom_banco}','${arrNot[i].ced_titular}','${arrNot[i].seccion_id}',${arrNot[i].monto},'${arrNot[i].estado}','${arrNot[i].fecha_pago}','${arrNot[i].fecha_procesada}','${arrNot[i].est_cedula}');\n`;
+
+        }
+        result+="\n\n";
+
+
+        const datoSec=await sequelize.query("Select * from 4seccions" );
+    
+        var arrSec=datoSec[0];
+
+        const seccion='INSERT INTO `4seccions` (`id`,`modalidad`,`fecha_inicio`,`fecha_finalizacion`,`hora_inicio`,`hora_finalizacion`,`cupo_actual`,`cupo_maximo`,`estado`,`curso_id`,`prof_cedula`) VALUES ';
+
+        for(let i=0; i<arrSec.length;i++){
+
+            result+=seccion+`('${arrSec[i].id}','${arrSec[i].modalidad}','${arrSec[i].fecha_inicio}','${arrSec[i].fecha_finalizacion}','${arrSec[i].hora_inicio}','${arrSec[i].hora_finalizacion}',${arrSec[i].cupo_actual},${arrSec[i].cupo_maximo},'${arrSec[i].estado}','${arrSec[i].curso_id}','${arrSec[i].prof_cedula}');\n`;
+
+        }
+        result+="\n\n";
+
+
+        const datoNotas=await sequelize.query("Select * from 5nota" );
+    
+        var arrNotas=datoNotas[0];
+
+        const nota='INSERT INTO `5nota` (`id`, `nota`, `seccion_id`, `est_cedula`) VALUES ';
+
+        for(let i=0; i<arrNotas.length;i++){
+
+            result+=nota+`(${arrNotas[i].id},${arrNotas[i].nota},'${arrNotas[i].seccion_id}','${arrNotas[i].est_cedula}');\n`;
+
+        }
+        result+="\n\n";
+
+
+
+        const Stream=res.writeHead(200, {
+            'Content-Type':'application/sql',
+            'Content-Disposition': `attachment;filename=${name}`
+        })
+
+        Stream.end(result);
+       
+    }catch(err){
+        res.send(err)
+    }
 }
 
 

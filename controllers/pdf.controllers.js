@@ -215,7 +215,9 @@ async function PDFnota(callback, endcallback, id){
     doc.font("Helvetica-Bold").fontSize(12);
     doc.text(`Curso: ${seccion.curso.nombre}`, 50, 50 );
     doc.moveDown();
-    doc.text(`Profesor: ${seccion.profesor.nombre} ${seccion.profesor.apellido}`, 50, 70);
+    doc.text(`Sección: ${seccion.id}`, 50, 70 );
+    doc.moveDown();
+    doc.text(`Profesor: ${seccion.profesor.nombre} ${seccion.profesor.apellido}`, 50, 90);
     doc.moveDown();
     const rowNotas=[];
 
@@ -229,10 +231,10 @@ async function PDFnota(callback, endcallback, id){
     const table ={
         title: "Lista de estudiantes con notas",
         headers: [
-            {label:'cedula',width:100},
-            {label:'nombre',width:100},
-            {label:'apellido',width:100},
-            {label:'nota',width:150}],
+            {label:'cedula',width:120},
+            {label:'nombre',width:150},
+            {label:'apellido',width:150},
+            {label:'nota',width:100}],
         rows: rowNotas,
         font:"Courier",
         fontSize:16

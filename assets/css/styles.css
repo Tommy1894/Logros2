@@ -1,0 +1,730 @@
+.navbar{
+    height: 100px;
+    background: linear-gradient(rgb(247, 66, 66), #A71125, #36141d) !important;
+}
+
+.botonlogin{
+    background-color: transparent;
+    color: #ffffff !important;
+    border-color: rgb(255, 255, 255);
+}
+
+.botonlogin:hover, .botonlogin:active {
+    background-color: white !important;
+    color: #000000 !important;
+    border-color: rgb(255, 255, 255) !important;
+}
+
+
+
+.imagen img{
+    width: 1600px;
+    height: 630px;
+}
+
+body h2, body h4{
+    margin: 5% 0;
+    text-align: center;
+}
+
+.ultimos-cupos{
+    display: flex;
+    margin-bottom: 5%;
+}
+
+.cursos-disponibles{
+    display: flex;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+
+#collapseOne, #collapseTwo, #collapseThree{
+    text-indent: 2%;
+}
+
+.foto-ministerio{
+    box-shadow: 0 0 20px #03f;
+    display: table;
+    margin: auto;
+    border-radius: 15%;
+}
+
+.card{
+    margin: 0 auto;
+    box-shadow: 3px 3px 20px #000000;
+}
+
+.card-text{
+    text-align: justify;
+    text-indent: 5%;
+}
+
+.card-title{
+    text-align: center;
+}
+
+
+
+.accordion-button, .accordion-button:focus, .accordion-button:enabled{
+    font-weight: bolder;
+    background: linear-gradient(darkred, red);
+    color: white;
+}
+
+.btn-primary{
+    color: rgb(255, 255, 255);
+    display: table;
+    margin: auto;
+}
+
+
+.accordion-item{
+    background-color: #ebebeb;
+}
+
+body{
+    
+    background-color: #ebebeb;
+}
+
+
+.linklogin{
+    text-decoration: none;
+    padding: 0 8%;
+}
+
+.login{
+    margin-right: 2%;
+}
+
+/*REGISTRO*/
+
+.registro{
+    display: block;
+    padding-bottom: 50px;
+}
+
+.registro div{
+    display: flex;
+}
+
+.registro label{
+    display: block;
+    margin: 2% 45%;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+}
+
+.registro div label{
+    display: block;
+    font-size: 2vw;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    margin: 2% auto;
+}
+
+.registro input, .registro textarea{
+    display: block;
+    resize: none;
+    background: transparent;
+    color: black;
+    font-size: 1.2vw;
+    width: 25%;
+    margin: 0 auto;
+    border: none;
+    border-bottom: 2px solid ;
+    padding: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.registro input::placeholder, .registro textarea::placeholder{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+}
+
+.registro input:focus, .registro textarea:focus{
+    outline: none;
+}
+
+.registro button[type=submit]{
+    display: block;
+    font-size: 1.5vw;
+    padding: 1% 5%;
+    margin: 5% auto;
+    border: none;
+    letter-spacing: 0.5vw;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: grey;
+}
+
+.registro button[type=submit]:hover{
+    background-color: black;
+    color: white;
+}
+
+.busqueda-curso{
+    margin: 5% auto;
+    width: 30%;
+}
+
+
+
+
+/*menu*/
+.menu > li{
+    position: relative;
+    display: inline-block;
+}
+
+.menu > li > a{
+    
+    display: block;
+}
+
+/*submenu
+
+.submenu{
+    position:fixed;
+    background: #A71125;
+    display: none;
+}
+.submenu li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+
+.menu li:hover .submenu{
+    display: block;
+}*/
+
+
+.textoRedesSociales{
+    padding-top: 2%;
+    margin-bottom: 0;
+}
+/* 
+footer{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    text-align: center;
+    padding-top: 3%;
+    bottom: 0;
+} */
+
+
+.socialIMG{
+    display: table;
+    margin: auto;
+}
+
+
+
+.social p{
+    font-size: 1.2rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+}
+
+.nav-static{
+    position:fixed;
+}
+ 
+
+.CursosInfo{
+    text-indent: 2%;
+}
+
+.fechaTransferencia{
+    height: 50px;
+    background: white;
+    color: black;
+    box-shadow: none;
+}
+
+
+
+
+.btn-outline-success{
+    color: rgb(0, 0, 0);
+    background-color: grey;
+    border-color: gray;
+}
+
+.btn-outline-success:hover{
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+
+/*cursos*/
+
+#cursosh1{
+    text-align: center;
+    margin-top: 5%;
+    color: #bb0a39;
+    text-shadow: 0 0 5px rgb(83, 83, 83);
+}
+
+
+
+#bienvenidoUsuario{
+    color: white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 1%;
+}
+
+.salirusuario{
+    margin-left: 2%;
+    color: white;
+    border-color: white;
+}
+
+
+
+/*tablas*/
+
+#textocursos{
+    text-align: left;
+    margin-top: 2%;
+    margin-bottom: 0%;
+    margin-left: 3%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+.tabla{
+    display: table;
+    margin: auto;
+    width: 60%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2rem;
+    border-left: transparent;
+    border-right: transparent;
+}
+
+table, th, td { 
+    border:2px solid #b80031;
+    text-align: center;
+    background-color:#ebebeb;
+
+}
+
+th, td{
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    border-left: transparent;
+    border-right: transparent;
+    
+    
+}
+
+thead{
+    text-transform: uppercase;
+    color: #b80031;
+}
+
+.textoHorario{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+.acordionhorario{
+    margin-bottom: 5%;
+}
+
+.nomProf{
+    text-align: right;
+    margin-top: 3%;
+    margin-right: 4%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.cartanotificacion{
+    margin-bottom: 6% !important;
+}
+
+.botonNota{
+    
+    display: table;
+    margin: auto;
+    margin-top: 2%;
+}
+
+
+
+
+
+
+
+
+.textobienvenida {
+	font-size: 2rem;
+	font-weight: light;
+	color: #000000;
+}
+
+/*esto le da efecto que se mueva de arriba hacia abajo, y viceversa*/
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+.containerAvatar {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+    padding-top: 3%;
+    background: linear-gradient(rgb(149, 149, 236), rgb(236, 236, 236));
+}
+
+.avatar {
+	width: 13%;
+	height: 13%;
+	box-sizing: border-box;
+	border: 5px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	
+}
+
+.contenidoAvatar {
+	width: 100%;
+	max-width: 600px;
+	padding: 20px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.form-notificacion{
+    display: table;
+    margin: 3% auto;
+}
+
+.form-notificacion label{
+    display: table;
+    margin: 0% auto;
+    font-weight: bolder;
+}
+
+.form-notificacion input[type=text], .form-notificacion input[type=number]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    padding: 2%;
+}
+
+.form-notificacion input[type=text]::placeholder, .form-notificacion input[type=number]::placeholder{
+    color: black;
+}
+
+.form-notificacion input:focus{
+    outline: none;
+}
+
+.form-notificacion select, #formFileLg{
+    margin: 3% auto !important;
+}
+
+.form-notificacion button{
+    width: 50%;
+    padding: 1%;
+    letter-spacing: 1vw;
+    font-weight: bolder;
+    background-color: grey;
+}
+
+.form-notificacion button:hover{
+    background-color: black;
+    color: white;
+}
+
+/*
+
+Profesor
+
+
+*/
+
+.BotonModificarNota{
+    color: rgb(0, 0, 0);
+    background-color: rgb(205, 205, 205);
+    border-color: #ff0000;
+    font-size: 0.8rem;
+}
+
+.BotonModificarNota:hover, .BotonModificarNota:active{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(87, 87, 87) !important;
+    border-color: #000000 !important;
+    font-size: 0.8rem;
+}
+
+
+
+.VolverProfNota, .AcepProfNota, .SeleccionarNota{
+    display: table;
+    margin: auto;
+}
+
+.tamanoNotaSelect{
+    width: 18%;
+    display: table;
+    margin: auto;
+}
+
+
+/*ADMIN NOTIFICACIÓN DE PAGO*/
+
+.notificaciones-lista{
+    display: table;
+    margin: 3% auto;
+}
+
+.notificaciones-lista a{
+    width: 100%;
+}
+
+.notificaciones-lista a:hover{
+    cursor: pointer;
+}
+
+.modal-logros .modal-header{
+    background: linear-gradient(darkred, red);
+    color: white;
+}
+
+.modal-logros .modal-body .accordion{
+    margin: 0 15%;
+}
+
+
+.botones-notificacion button{
+    margin: 2%;
+    padding: 1%;
+}
+
+.botones-notificacion button:hover{
+    background-color: black;
+    color: white;
+}
+
+.modal-logros .modal-footer{
+    background-color: black;
+}
+
+.modal-logros .modal-footer button{
+    display: table;
+    margin: 0 auto;
+}
+
+
+
+/*GESTION CURSOS*/
+
+
+.textoGestion{
+    color: black;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 1%;
+    margin-bottom: 2%;
+}
+
+
+.BotonModificar, .BotonEliminar{
+    color: rgb(0, 0, 0);
+    background-color: rgb(205, 205, 205);
+    border-color: #ff0000;
+    font-size: 0.7rem;
+    padding: 4%;    
+}
+
+.BotonModificar:hover, .BotonModificar:active, .BotonEliminar:hover, .BotonEliminar:active{
+    color: rgb(255, 255, 255) !important;
+    background-color: rgb(87, 87, 87) !important;
+    border-color: #000000 !important;
+    
+}
+
+.BuscadorGestion{
+    width: 30%;
+    display: table;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 1%;
+}
+
+.tablaGestion{
+    margin-bottom: 3rem;
+}
+
+.containerBuscarGestion{
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    letter-spacing: 5px;
+}
+
+.btnGestion{
+    position: relative;
+    padding: 8px 20px;
+    text-align: none;
+    color: #b42020;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.BotonAgregar{
+     border: 3px solid;
+     transition: all 0.6s ease;
+}
+.BotonAgregar:hover{
+    background-color: rgb(195, 195, 195);
+    box-shadow: 0 0 20px var(--color);
+    border-color: var(--color);
+}
+
+.BotonAgregar span:nth-child(n){
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 3px solid;
+    transition: all 0.6s ease;
+}
+
+.BotonAgregar span:nth-child(1){
+    right: 10%;
+    top: -15%;
+    background-color: #ffffff;
+}
+
+.BotonAgregar span:nth-child(2){
+    left: 10%;
+    bottom: -10%;
+}
+
+.BotonAgregar:hover span:nth-child(1){
+    right: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+    background-color: var(--color);
+}
+
+.BotonAgregar:hover span:nth-child(2){
+    left: 80%;
+    transform: rotate(90deg);
+    color: var(--color);
+}
+
+.modal-eliminar-cursos{
+    text-align: center;
+}
+
+.modal-eliminar-cursos h6{
+    font-weight: bolder;
+}
+
+.modal-eliminar-cursos button{
+    padding: 1%;
+    width: 25%;
+}
+
+.modal-eliminar-cursos button:hover{
+    background-color: black;
+    color: white;
+}
+
+/* AGREGAR CURSO */
+
+
+
+.form-agregarGestion{
+    display: table;
+    margin: 3% auto;
+}
+
+.form-agregarGestion label{
+    display: table;
+    margin: 0% auto;
+    font-weight: bolder;
+}
+
+.form-agregarGestion input[type=text], .form-agregarGestion input[type=number], .form-agregarGestion input[type=email], .form-agregarGestion input[type=password]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    background: transparent;
+    padding: 2%;
+}
+
+.form-agregarGestion input[type=text]::placeholder, .form-agregarGestion input[type=number]::placeholder, .form-agregarGestion input[type=email]::placeholder, .form-agregarGestion input[type=password]::placeholder{
+    color: black;
+}
+
+.form-agregarGestion input:focus{
+    outline: none;
+}
+
+.form-agregarGestion select, #formFileLg{
+    margin: 3% auto !important;
+}
+
+.form-agregarGestion button{
+    width: 50%;
+    display: table;
+    margin: auto;
+    padding: 1%;
+    letter-spacing: 0.5vw;
+    font-weight: bolder;
+    background-color: grey;
+}
+
+.form-agregarGestion button:hover{
+    background-color: black;
+    color: white;
+}
+.areaAgregarGestion{
+    resize: none;
+}
+
+.dim_filtro{
+    size: 300px 50px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+#cedula{}

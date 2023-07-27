@@ -97,6 +97,21 @@ async function aprobarNotificacion(req, res){
       return res.status(500).json({ message: e.message });
     }
 } 
+
+async function FechaNotificacion(req,res){
+    try {
+        const { ref } = req.params;
+        const {fecha} =req.body;
+        
+        const noti = await Notificacion.findByPk(ref);
+        seccion.fecha_procesada = fecha;
+        await noti.save();
+    
+        res.json(seccion);
+      } catch (error) {
+        return res.status(500).json({ message: error.message });
+      }
+}
 module.exports={
     getNotificacion,
     createNotificacion,
@@ -104,5 +119,6 @@ module.exports={
     getNotificacionFecha,
     getUsuarioNotificaciones,
     rechazarNotificacion,
-    aprobarNotificacion
+    aprobarNotificacion,
+    FechaNotificacion
 }

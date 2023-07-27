@@ -18,9 +18,7 @@ async function getSeccion(req, res){
 
 async function getSeccionFiltroId(req, res){
     try{
-        const secciones=await Seccion.findByPk(req.params.value,{
-            include:[{model:Usuario, as:'profesor'},{model:Curso, as: 'curso'}]
-        });
+        const secciones=await Seccion.findByPk(req.params.value);
         
         res.json(secciones);
         

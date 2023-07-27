@@ -22,11 +22,8 @@ async function getNotaSeccion(req, res){
         const {id}=req.params;
         
         const notas=await Nota.findAll({
-            
-            include:{model:Usuario, as:'estudiante'},
             where:{seccion_id:id}
         });
-        console.log(notas.estudiante.nombre);
 
         
         res.json(notas);

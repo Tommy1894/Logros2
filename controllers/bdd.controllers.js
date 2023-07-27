@@ -18,7 +18,7 @@ async function backup(req, res){
         user: DB_USER,
         password: DB_PASSWORD,
         database: DB_DATABASE,
-        connectTimeout: 30000
+        connectTimeout: 50000
         },
     });
 

@@ -290,6 +290,21 @@ async function intentosUsuario(req, res){
         return res.status(500).json({ message: error.message });
       }
 }
+
+async function limpiarintentosUsuario(req, res){
+    try {
+        const { cedula } = req.params;
+        const usuario = await Usuario.findByPk(cedula);
+        usuario.intentos = 0;
+        usuario.estado="A";
+        
+        await usuario.save();
+    
+        res.json(usuario);
+      } catch (error) {
+        return res.status(500).json({ message: error.message });
+      }
+}
 module.exports={
     getUsuarios,
     getUsuariosFiltro,
@@ -305,5 +320,6 @@ module.exports={
     updateUsuario,
     updateAmdiminstrador,
     deleteUsuario,
-    intentosUsuario
+    intentosUsuario,
+    limpiarintentosUsuario
 };

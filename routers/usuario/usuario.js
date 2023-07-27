@@ -5,7 +5,8 @@ const {getUsuarios,getUsuariosFiltro,
     createEstudiante,createProfesor,createAdministrador,
     updateUsuario,updateAmdiminstrador,
     deleteUsuario,
-    intentosUsuario} = require('../../controllers/usuario.controllers');
+    intentosUsuario,
+    limpiarintentosUsuario} = require('../../controllers/usuario.controllers');
 
 const router=require('express').Router();
 
@@ -19,6 +20,7 @@ router.get('/profesores/filtro=:value', getProfesoresFiltro);
 router.get('/administradores', getAdministradores);
 router.get('/administradores/filtro=:value', getAdministradoresFiltro);
 router.get('/intentos/cedula=:cedula', intentosUsuario);
+router.get('/limpiar/cedula=:cedula', limpiarintentosUsuario)
 
 //POST
 router.post('/estudiantes', createEstudiante);

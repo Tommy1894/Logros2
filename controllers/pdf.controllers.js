@@ -171,6 +171,11 @@ async function PDFnota(callback, endcallback, id){
         order:[[{model: Usuario, as:'estudiante'}, 'nombre']]
     });
 
+    const seccion=await Seccion.findByPk(id,{
+        include:[{model:Usuario, as:'profesor'},{model:Curso, as: 'curso'}]
+    });
+    console.log(seccion.profesor.nombre);
+    console.log(seccion.curso.nombre);
 
     const doc= new PDFdocument({
         size:"LETTER",

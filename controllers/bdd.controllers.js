@@ -1,7 +1,6 @@
 const mysqldump=require('mysqldump');
-const moment = require('moment')
+const moment = require('moment');
 const fs=require('fs');
-const raiz=require('../backup/raiz');
 
 const sequelize = require("../db");
 
@@ -13,27 +12,24 @@ const DB_DATABASE=process.env.DB_DATABASE || "mydb";
 async function backup(req, res){    
 
     const name=`BackUp (${moment().format('DD_MM_YYYY')}).sql`;
-    const filePath=raiz +'/'+name;
 
-    await mysqldump({
+    const result=await mysqldump({
         connection: {
         host: DB_HOST,
         user: DB_USER,
         password: DB_PASSWORD,
         database: DB_DATABASE,
         },
-        dumpToFile: filePath
-        
     });
 
+    const data= result.dump.data;
+    
     const Stream=res.writeHead(200, {
         'Content-Type':'application/sql',
         'Content-Disposition': `attachment;filename=${name}`
     })
 
-    var readStream = fs.createReadStream(filePath);
-    readStream.pipe(Stream);
-
+    Stream.end(data)
 }
 
 

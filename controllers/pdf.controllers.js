@@ -2,6 +2,8 @@ const PDFdocument = require("pdfkit-table");
 
 const Usuario = require("../models/usuario");
 const Nota = require("../models/nota");
+const Seccion = require("../models/seccion");
+const Curso = require("../models/curso");
 
 async function PDFestudiante(callback, endcallback){
     
@@ -210,7 +212,11 @@ async function PDFnota(callback, endcallback, id){
     doc.font("Helvetica-Bold").fontSize(14);
     doc.text("Centro Educativo LOGROS", 50,30);
     doc.moveDown();
-    
+    doc.font("Helvetica-Bold").fontSize(12);
+    doc.text(`Curso: ${seccion.curso.nombre}`, 50, 50 );
+    doc.moveDown();
+    doc.text(`Profesor: ${seccion.profesor.nombre} ${seccion.profesor.apellido}`, 50, 70);
+    doc.moveDown();
     const rowNotas=[];
 
     notas.forEach(element =>{
